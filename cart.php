@@ -1,4 +1,7 @@
 <?php
+if (function_exists('session_status') && session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 require_once 'config.php';
 
 // Debug để kiểm tra giỏ hàng (có thể bỏ comment để test)
